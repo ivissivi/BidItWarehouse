@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
+
 namespace BidItWarehouse
 {
     public partial class Login : Form
@@ -56,6 +57,11 @@ namespace BidItWarehouse
         }
 
         private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

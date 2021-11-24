@@ -32,7 +32,7 @@ namespace BidItWarehouse
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblAccessCode = new System.Windows.Forms.Label();
             this.txtAccessCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbxExit = new System.Windows.Forms.PictureBox();
@@ -46,12 +46,13 @@ namespace BidItWarehouse
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(7)))), ((int)(((byte)(11)))));
             this.panel2.Controls.Add(this.btnLogin);
-            this.panel2.Controls.Add(this.lblUsername);
+            this.panel2.Controls.Add(this.lblAccessCode);
             this.panel2.Controls.Add(this.txtAccessCode);
-            this.panel2.Location = new System.Drawing.Point(223, 98);
+            this.panel2.Location = new System.Drawing.Point(224, 127);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(397, 210);
+            this.panel2.Size = new System.Drawing.Size(396, 198);
             this.panel2.TabIndex = 22;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnLogin
             // 
@@ -61,7 +62,7 @@ namespace BidItWarehouse
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(120, 134);
+            this.btnLogin.Location = new System.Drawing.Point(120, 149);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(152, 37);
             this.btnLogin.TabIndex = 4;
@@ -69,17 +70,17 @@ namespace BidItWarehouse
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // lblUsername
+            // lblAccessCode
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.Transparent;
-            this.lblUsername.Location = new System.Drawing.Point(35, 38);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(129, 24);
-            this.lblUsername.TabIndex = 2;
-            this.lblUsername.Text = "Insert code";
-            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
+            this.lblAccessCode.AutoSize = true;
+            this.lblAccessCode.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccessCode.ForeColor = System.Drawing.Color.Transparent;
+            this.lblAccessCode.Location = new System.Drawing.Point(35, 38);
+            this.lblAccessCode.Name = "lblAccessCode";
+            this.lblAccessCode.Size = new System.Drawing.Size(129, 24);
+            this.lblAccessCode.TabIndex = 2;
+            this.lblAccessCode.Text = "Insert code";
+            this.lblAccessCode.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // txtAccessCode
             // 
@@ -89,7 +90,7 @@ namespace BidItWarehouse
             this.txtAccessCode.Location = new System.Drawing.Point(42, 78);
             this.txtAccessCode.Multiline = true;
             this.txtAccessCode.Name = "txtAccessCode";
-            this.txtAccessCode.Size = new System.Drawing.Size(318, 31);
+            this.txtAccessCode.Size = new System.Drawing.Size(318, 38);
             this.txtAccessCode.TabIndex = 0;
             this.txtAccessCode.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
@@ -100,7 +101,7 @@ namespace BidItWarehouse
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 170);
+            this.panel1.Size = new System.Drawing.Size(834, 170);
             this.panel1.TabIndex = 23;
             // 
             // pbxExit
@@ -120,7 +121,7 @@ namespace BidItWarehouse
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(832, 450);
+            this.ClientSize = new System.Drawing.Size(834, 443);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
@@ -139,7 +140,7 @@ namespace BidItWarehouse
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblAccessCode;
         private System.Windows.Forms.TextBox txtAccessCode;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbxExit;

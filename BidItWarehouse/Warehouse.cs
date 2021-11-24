@@ -36,5 +36,20 @@ namespace BidItWarehouse
             new Login().Show();
             this.Hide();
         }
+
+        private void warehouseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
